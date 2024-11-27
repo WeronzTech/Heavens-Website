@@ -1,8 +1,8 @@
 import whyGradient from "../assets/why-gradient.svg";
-import innovation from "../assets/innovation.webp";
-import transparency from "../assets/transparency.webp";
-import reliability from "../assets/relaibility.webp";
-import scalability from "../assets/scalabilty.webp";
+import c1 from "../assets/whychooseus/c1.jpg";
+import c2 from "../assets/whychooseus/c2.jpg";
+import c3 from "../assets/whychooseus/c3.jpg";
+import c4 from "../assets/whychooseus/c4.jpg";
 import {
   motion,
   useMotionValueEvent,
@@ -62,22 +62,22 @@ const WhyUs = () => {
           className="relative z-10 h-[350px] w-full object-cover sm:h-[450px] md:h-[591px] md:min-w-[400px] xl:min-w-[592px]"
         >
           <img
-            src={innovation}
+            src={c1}
             alt=""
             className={`absolute z-[13] h-full w-full scale-[1.01] object-cover transition-all duration-300 ${position === 1 ? "opacity-100" : "opacity-0"}`}
           />
           <img
-            src={transparency}
+            src={c2}
             alt=""
             className={`absolute z-[12] h-full w-full scale-[1.005] object-cover transition-all duration-300 ${position <= 2 ? "opacity-100" : "opacity-0"}`}
           />
           <img
-            src={reliability}
+            src={c3}
             alt=""
             className={`absolute z-[11] h-full w-full object-cover transition-all duration-300 ${position <= 3 ? "opacity-100" : "opacity-0"}`}
           />
           <img
-            src={scalability}
+            src={c4}
             alt=""
             className={`absolute z-[10] h-full w-full object-cover transition-all duration-300 ${position <= 4 ? "opacity-100" : "opacity-100"}`}
           />

@@ -1,8 +1,8 @@
 import dotBg from "../assets/dot-bg.svg";
 import ctaGradient from "../assets/cta-gradient.svg";
 import checkmark from "../assets/checkmark.svg";
-import arrow from "../assets/arrow.svg";
-import ctaCard from "../assets/cta-card.webp";
+//import arrow from "../assets/arrow.svg";
+//import ctaCard from "../assets/cta-card.webp";
 import ctaPhone from "../assets/cta-phone.webp";
 import { motion } from "framer-motion";
 
@@ -37,7 +37,7 @@ const SecondCTA = () => {
           }}
           className="text-4xl font-bold leading-tight tracking-[-0.96px] text-[#0E1829] md:w-[576px] md:text-[48px] md:leading-[60px]"
         >
-          Your Personal finances, a few taps away
+          Keep us within reach at all times.
         </motion.h2>
 
         <motion.ul
@@ -63,7 +63,7 @@ const SecondCTA = () => {
               alt=""
               className="me-3 h-5 w-5 flex-shrink-0"
             />
-            At least 10 characters
+            Effortless Room Booking
           </li>
           <li className="flex items-center">
             <img
@@ -71,7 +71,7 @@ const SecondCTA = () => {
               alt=""
               className="me-3 h-5 w-5 flex-shrink-0"
             />
-            Customized card . With a unique design
+            Daily Menu Updates
           </li>
           <li className="flex items-center">
             <img
@@ -79,7 +79,7 @@ const SecondCTA = () => {
               alt=""
               className="me-3 h-5 w-5 flex-shrink-0"
             />
-            Spend up to $100,000 per month
+            Real-Time Updates
           </li>
           <li className="flex items-center">
             <img
@@ -112,10 +112,10 @@ const SecondCTA = () => {
             <div className="absolute -left-1 bottom-0 right-0 -z-10 !mx-auto h-[0px] w-[207px] rounded-full bg-black transition-all duration-300 group-hover:h-[59px]" />
             <span className="group-hover:text-white">Get Started</span>
           </button>
-          <button className="flex h-[56px] w-[180px] items-center justify-center gap-3 rounded-full text-base font-medium leading-[28px] text-[#445568] underline-offset-8 transition-all hover:underline md:h-[60px] md:w-[202px] md:text-[18px]">
+          {/* <button className="flex h-[56px] w-[180px] items-center justify-center gap-3 rounded-full text-base font-medium leading-[28px] text-[#445568] underline-offset-8 transition-all hover:underline md:h-[60px] md:w-[202px] md:text-[18px]">
             <span> Learn More</span>
             <img src={arrow} alt="" />
-          </button>
+          </button> */}
         </motion.div>
       </div>
 
@@ -124,11 +124,11 @@ const SecondCTA = () => {
         alt=""
         className="absolute bottom-0 left-[250px] -z-10 mx-auto hidden w-[1287px] md:block 3xl:left-[300px] 3xl:right-0"
       />
-      <img
+      {/* <img
         src={ctaCard}
         alt=""
         className="absolute top-[96px] -z-[11] mx-auto hidden md:right-0 lg:block xl:right-[80px] 3xl:left-0 3xl:right-[-900px]"
-      />
+      /> */}
     </section>
   );
 };
