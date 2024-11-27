@@ -3,7 +3,7 @@ import ctaGradient from "../assets/cta-gradient.svg";
 import checkmark from "../assets/checkmark.svg";
 //import arrow from "../assets/arrow.svg";
 //import ctaCard from "../assets/cta-card.webp";
-import ctaPhone from "../assets/cta-phone.webp";
+import ctaPhone from "../assets/app-frame.png";
 import { motion } from "framer-motion";
 
 const SecondCTA = () => {
@@ -123,6 +123,7 @@ const SecondCTA = () => {
         src={ctaPhone}
         alt=""
         className="absolute bottom-0 left-[250px] -z-10 mx-auto hidden w-[1287px] md:block 3xl:left-[300px] 3xl:right-0"
+        //className="absolute bottom-0 left-1/2 -z-10 w-full max-w-[300px] -translate-x-1/2 transform md:left-[250px] md:max-w-[1287px] md:translate-x-0 3xl:left-[300px] 3xl:right-0"
       />
       {/* <img
         src={ctaCard}
