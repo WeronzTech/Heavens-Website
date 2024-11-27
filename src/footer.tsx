@@ -22,7 +22,7 @@ const Footer = () => {
         }}
         src={logoWhite}
         alt=""
-        className="w-[1315.875px] 3xl:max-w-[1200px] mt-[-10rem]"
+        className="w-[1315.875px] 3xl:max-w-[1200px] lg:mt-[-10rem]"
       />
 
       <div className="flex w-full flex-col items-center justify-center gap-12 3xl:max-w-[1200px]">
