@@ -39,7 +39,7 @@ const Amenities = () => {
   };
 
   return (
-    <section className="bg-[#1A1A1A] py-32 md:py-48 px-4 md:px-8 lg:px-16 min-h-screen flex items-center">
+    <section className="bg-[#1A1A1A] py-32 md:py-48 px-4 md:px-8 lg:px-16 min-h-screen flex items-center relative overflow-hidden">
       <motion.div
         initial="hidden"
         whileInView="visible"
