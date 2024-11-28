@@ -1,17 +1,33 @@
 import heroBg from "../assets/hero-bg.webp";
-// import arrow from "../assets/arrow.svg";
-// import og1 from "../assets/interlock-og.webp";
-// import og2 from "../assets/interlock-og-2.webp";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const images = [
+    "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1460317442991-0ec209397118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section
       id="hero"
       style={{ backgroundImage: `url(${heroBg})` }}
       className="relative flex min-h-[810px] w-full flex-col items-center justify-center overflow-hidden bg-cover px-6 pt-[0px] md:flex-row md:items-start md:px-10 md:pt-[200px] lg:justify-start lg:pt-[237px] xl:px-[159px] 3xl:justify-center"
     >
-      <div className="z-10 flex w-full flex-col items-center text-[#0e0e0e] lg:items-start 3xl:max-w-[1200px]">
+      {/* Left Content */}
+      <div className="z-10 flex w-full flex-col items-center text-[#0e0e0e] lg:items-start 3xl:max-w-[1200px] md:w-1/2">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           whileInView={{
@@ -73,23 +89,71 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* New Video Div */}
-      <div className="relative z-10 w-full md:w-1/2 lg:w-1/2 bg-red-600">
-        <video
-          className="absolute inset-0 w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src="https://videos.pexels.com/video-files/3648257/3648257-sd_640_360_30fps.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      {/* Right Carousel */}
+      <motion.div 
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+        className="w-full md:w-1/2 relative h-[300px] sm:h-[400px] lg:h-[600px] mt-4 md:-mt-12 lg:-mt-20 px-4 md:px-6"
+      >
+        <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-lg">
+          {images.map((img, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ 
+                opacity: currentImage === index ? 1 : 0,
+                scale: currentImage === index ? 1 : 1.1
+              }}
+              transition={{ duration: 0.8 }}
+              className="absolute inset-0"
+            >
+              <img
+                src={img}
+                alt={`Apartment ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/20"></div>
+            </motion.div>
+          ))}
+          
+          {/* Play Button Circle */}
+          <motion.div 
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.5, duration: 0.3, type: "spring" }}
+            className="absolute top-8 right-8 z-20"
+          >
+            <button className="group relative w-14 h-14 md:w-16 md:h-16 bg-white/50 backdrop-blur-md rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+              {/* Tilted Triangle Play Icon */}
+              
+                <div className="w-0 h-0 
+                  border-t-[8px] border-t-transparent
+                  border-l-[16px] border-l-black
+                  border-b-[8px] border-b-transparent
+                  translate-x-[2px]"
+                />
+                
 
-      {/* Removed heroImg */}
-      {/* <img src={og1} alt="" className="hidden" />
-      <img src={og2} alt="" className="hidden" /> */}
+              {/* Ripple Effect */}
+              <div className="absolute inset-0 rounded-full bg-white/30 group-hover:scale-150 transition-transform duration-500" />
+            </button>
+          </motion.div>
+          
+          {/* Carousel Indicators */}
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImage(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  currentImage === index ? 'bg-white w-6' : 'bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
