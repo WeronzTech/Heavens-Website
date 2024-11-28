@@ -1,4 +1,4 @@
-import logo from "./assets/heavens.png";
+import logo from "./assets/heavens-red.png";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -37,7 +37,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt=""
-            className="w-[120px] cursor-pointer md:w-[142px] mt-[-20px]"
+            className="w-[120px] cursor-pointer md:w-[142px]"
           />
         </a>
         <div className="hidden items-center justify-center gap-[20px] text-base font-semibold leading-[24px] text-[#445568] md:flex md:gap-[32px] xl:text-[18px]">
