@@ -7,6 +7,22 @@ import ctaPhone from "../assets/app-frame.png";
 import { motion } from "framer-motion";
 
 const SecondCTA = () => {
+  const phoneVariants = {
+    hidden: { 
+      opacity: 0,
+      y: 100 // Start 100px below
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+        delay: 0.3
+      }
+    }
+  };
+
   return (
     <section
       id="get-app"
@@ -119,11 +135,14 @@ const SecondCTA = () => {
         </motion.div>
       </div>
 
-      <img
+      <motion.img
         src={ctaPhone}
         alt=""
-        className="absolute bottom-0 left-[250px] -z-10 mx-auto hidden w-[1287px] md:block 3xl:left-[300px] 3xl:right-0"
-        //className="absolute bottom-0 left-1/2 -z-10 w-full max-w-[300px] -translate-x-1/2 transform md:left-[250px] md:max-w-[1287px] md:translate-x-0 3xl:left-[300px] 3xl:right-0"
+        variants={phoneVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="absolute bottom-0 left-1/2 -z-10 w-full max-w-[300px] -translate-x-1/2 transform md:left-[250px] md:max-w-[1287px] md:translate-x-0 3xl:left-[300px] 3xl:right-0"
       />
       {/* <img
         src={ctaCard}
