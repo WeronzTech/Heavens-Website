@@ -3,12 +3,12 @@ import Hero from "./components/hero";
 import Footer from "./footer";
 import SocialProof from "./components/social-proof";
 import About from "./components/about";
-import FirstCTA from "./components/first-cta";
 import WhyUs from "./components/why-us";
 import SecondCTA from "./components/second-cta";
 import SmoothScrolling from "./components/smooth-scrolling";
 import Testimonials from './components/Testimonials'
 import Amenities from "./components/Amenities";
+// import FirstCTA from "./components/first-cta";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Hero />
         <SocialProof />
         <About />
-        <FirstCTA />
+        {/* <FirstCTA /> */}
         <WhyUs />
         <SecondCTA />
         <Amenities />
