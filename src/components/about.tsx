@@ -66,12 +66,7 @@ const AboutUs = () => {
         >
           <h2 className="text-4xl font-bold mb-4">Our Mission</h2>
           <p className="text-gray-700 text-lg leading-relaxed">
-            There's this notion that to grow a business, you have to be ruthless. But we know
-            there's a better way to grow. One where what's good for the bottom line is also
-            good for customers. We believe businesses can grow with a conscience, and succeed
-            with a soul — and that they can do it with inbound. That's why we've created an
-            ecosystem uniting software, education, and community to help businesses grow
-            better every day.
+          At Heavens Living, we believe in creating more than just a place to stay. We are on a mission to redefine affordable living for students and working professionals by offering well-maintained, modern, and welcoming spaces where you can focus on what matters most—your goals and dreams.
           </p>
         </motion.div>
         <motion.div 
@@ -108,9 +103,7 @@ const AboutUs = () => {
         >
           <h2 className="text-4xl font-bold mb-4">Our Story</h2>
           <p className="text-gray-700 text-lg leading-relaxed">
-            As fellow graduate students at MIT in 2004, Brian and Dharmesh noticed a shift in the
-            way people shop and buy. Consumers were no longer tolerating interruptive bids for their
-            attention — in fact, they'd gotten really, really good at ignoring them.
+            We understand the challenges of finding suitable accommodation in busy cities. That’s why we’re here to provide not just a roof over your head, but a home where comfort meets convenience. Whether you’re looking for short-term stays or long-term living, Heavens Living has the perfect solution for you.
           </p>
         </motion.div>
         <motion.div 
