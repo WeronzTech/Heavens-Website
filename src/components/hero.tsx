@@ -1,9 +1,11 @@
-import heroBg from "../assets/hero-bg.webp";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import heroBg from "../assets/hero-bg.webp";
+import BookingModal from "./BookingModal";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const images = [
     "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
@@ -29,6 +31,8 @@ const Hero = () => {
     >
       {/* Left Content */}
       <div className="z-10 flex w-full flex-col items-center text-[#0e0e0e] lg:items-start 3xl:max-w-[1200px] md:w-1/2">
+
+        {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           whileInView={{
@@ -47,6 +51,8 @@ const Hero = () => {
         >
           Home, Away from Home
         </motion.h1>
+
+        {/* Subheading */}
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           whileInView={{
@@ -64,7 +70,7 @@ const Hero = () => {
           }}
           className="mt-[25.5px] w-full text-center text-base font-medium leading-6 md:w-[523px] md:text-[20px] md:leading-[30px] lg:text-left"
         >
-          It is a long established fact that a reader will be distracted by the readable content of a page
+          Welcome to Heavens Living, your perfect partner in finding safe, comfortable, and budget-friendly accommodation. Designed with students and professionals in mind, our PG stays offer the right mix of convenience, quality, and affordability.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -83,7 +89,9 @@ const Hero = () => {
           }}
           className="mt-[55.5px] flex w-full flex-col items-center justify-center gap-6 md:flex-row lg:justify-start"
         >
-          <button className="group relative h-[56px] w-[180px] overflow-hidden rounded-full border-2 border-[#131316] text-base font-medium leading-[28px] text-[#445568] shadow-[0_1px_2px_0_rgba(14,24,41,0.05)] md:h-[60px] md:w-[202px] md:text-[18px]">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="group relative h-[56px] w-[180px] overflow-hidden rounded-full border-2 border-[#131316] text-base font-medium leading-[28px] text-[#445568] shadow-[0_1px_2px_0_rgba(14,24,41,0.05)] md:h-[60px] md:w-[202px] md:text-[18px]">
             <div className="absolute -left-1 bottom-0 right-0 -z-10 !mx-auto h-[0px] w-[207px] rounded-full bg-black transition-all duration-300 group-hover:h-[59px]" />
             <span className="group-hover:text-white">Book Now</span>
           </button>
@@ -155,6 +163,12 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* Add Modal */}
+      <BookingModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };
