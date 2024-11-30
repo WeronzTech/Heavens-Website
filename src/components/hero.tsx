@@ -164,7 +164,7 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      {/* Add Modal */}
+      {/* Booking Modal */}
       <BookingModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)}
