@@ -12,7 +12,7 @@ const Amenities = () => {
     { id: '08', title: 'COFFEE VENDING MACHINE' },
     { id: '09', title: 'GAMING SECTION' },
     { id: '10', title: 'WORK SPACE' },
-    { id: '11', title: 'CCTV' },
+    // { id: '11', title: 'CCTV' },
   ];
 
   const containerVariants = {

@@ -63,7 +63,7 @@ const Navbar = () => {
             Services
           </a>
           <a
-            href="/#services"
+            href="/#contact"
             onClick={handleScroll}
             className="cursor-pointer transition-all hover:text-[#445568]/50"
           >
