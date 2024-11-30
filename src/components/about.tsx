@@ -44,6 +44,7 @@ const AboutUs = () => {
 
   return (
     <motion.div 
+      id='about'
       className="font-sans"
       variants={containerVariants}
       initial="hidden"

@@ -1,7 +1,12 @@
 import logo from "./assets/heavens-red.png";
 import { motion } from "framer-motion";
+import BookingModal from "./components/BookingModal";
+import { useState } from "react";
 
 const Navbar = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     // first prevent the default behavior
     e.preventDefault();
@@ -49,14 +54,14 @@ const Navbar = () => {
             Home
           </a>
           <a
-            href="/#products"
+            href="/#about"
             onClick={handleScroll}
             className="cursor-pointer transition-all hover:text-[#445568]/50"
           >
             About
           </a>
           <a
-            href="/#resources"
+            href="/#services"
             onClick={handleScroll}
             className="cursor-pointer transition-all hover:text-[#445568]/50"
           >
@@ -72,12 +77,21 @@ const Navbar = () => {
         </div>
       </div>
 
-      <a href="/#get-app" onClick={handleScroll}>
-        <button className="btn-shadow group relative flex h-[38px] w-[110px] items-center justify-center overflow-hidden rounded-full bg-[#131316] text-sm font-medium leading-[24px] text-white outline outline-4 -outline-offset-[0px] outline-white/[55%] transition-all hover:outline-[5px] hover:-outline-offset-1 hover:outline-white/[100%] md:h-[48px] xl:w-[154px] xl:text-[18px]">
+
+        <button 
+          className="btn-shadow group relative flex h-[38px] w-[110px] items-center justify-center overflow-hidden rounded-full bg-[#131316] text-sm font-medium leading-[24px] text-white outline outline-4 -outline-offset-[0px] outline-white/[55%] transition-all hover:outline-[5px] hover:-outline-offset-1 hover:outline-white/[100%] md:h-[48px] xl:w-[154px] xl:text-[18px]"
+          onClick={() => setIsModalOpen(true)}
+          >
           <div className="absolute -bottom-[2px] -left-1 right-0 z-10 !mx-auto h-[0px] w-[160px] rounded-full bg-white transition-all duration-300 group-hover:h-[52px]" />{" "}
           <span className="z-[11] group-hover:text-black">Book Now</span>
         </button>
-      </a>
+     
+
+      {/* Booking Modal */}
+      <BookingModal 
+        isOpen={isModalOpen}
+        onClose={()  => setIsModalOpen}
+        />
     </motion.nav>
   );
 };
