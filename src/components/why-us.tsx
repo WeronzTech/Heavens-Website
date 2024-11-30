@@ -41,10 +41,10 @@ const WhyUs = () => {
   return (
     <section
       id="services"
-      className="relative flex w-full flex-col-reverse items-center justify-center gap-16 px-6 pb-16 pt-6 md:flex-row md:px-10 md:pb-7 md:pt-24 xl:px-[159px]"
+      className="relative flex w-full flex-col-reverse items-center justify-center gap-16 px-6 pb-24 pt-12 md:flex-row md:px-10 md:pb-16 md:pt-32 xl:px-[159px]"
     >
       <img src={whyGradient} alt="" className="absolute bottom-0 left-0" />
-      <div className="relative flex w-full flex-col-reverse gap-16 md:flex-row 3xl:max-w-[1200px]">
+      <div className="relative flex w-full flex-col-reverse gap-20 md:flex-row 3xl:max-w-[1200px]">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{
@@ -59,31 +59,31 @@ const WhyUs = () => {
             amount: "some",
             once: true,
           }}
-          className="relative z-10 h-[350px] w-full object-cover sm:h-[450px] md:h-[591px] md:min-w-[400px] xl:min-w-[592px]"
+          className="relative z-10 h-[400px] w-full object-cover sm:h-[500px] md:h-[650px] md:min-w-[400px] xl:min-w-[592px] rounded-3xl"
         >
           <img
             src={c1}
             alt=""
-            className={`absolute z-[13] h-full w-full scale-[1.01] object-cover transition-all duration-300 ${position === 1 ? "opacity-100" : "opacity-0"}`}
+            className={`rounded-3xl absolute z-[13] h-full w-full scale-[1.01] object-cover transition-all duration-300 ${position === 1 ? "opacity-100" : "opacity-0"}`}
           />
           <img
             src={c2}
             alt=""
-            className={`absolute z-[12] h-full w-full scale-[1.005] object-cover transition-all duration-300 ${position <= 2 ? "opacity-100" : "opacity-0"}`}
+            className={`rounded-3xl absolute z-[12] h-full w-full scale-[1.005] object-cover transition-all duration-300 ${position <= 2 ? "opacity-100" : "opacity-0"}`}
           />
           <img
             src={c3}
             alt=""
-            className={`absolute z-[11] h-full w-full object-cover transition-all duration-300 ${position <= 3 ? "opacity-100" : "opacity-0"}`}
+            className={`rounded-3xl absolute z-[11] h-full w-full object-cover transition-all duration-300 ${position <= 3 ? "opacity-100" : "opacity-0"}`}
           />
           <img
             src={c4}
             alt=""
-            className={`absolute z-[10] h-full w-full object-cover transition-all duration-300 ${position <= 4 ? "opacity-100" : "opacity-100"}`}
+            className={`rounded-3xl absolute z-[10] h-full w-full object-cover transition-all duration-300 ${position <= 4 ? "opacity-100" : "opacity-100"}`}
           />
         </motion.div>
 
-        <div ref={cardRef} className="flex flex-col pt-[50px]">
+        <div ref={cardRef} className="flex flex-col pt-[70px]">
           <h3 className="text-[32px] font-bold leading-[44px] tracking-[-0.72px] text-[#0e1829] md:text-[36px]">
             Why Choose US
           </h3>
@@ -102,12 +102,12 @@ const WhyUs = () => {
               className={`py-4 pl-6 transition-all ${position === 1 ? "opacity-100" : "opacity-30"}`}
             >
               <h5 className="text-[20px] font-bold leading-[30px] text-[#0e1829]">
-                Innovation
+                Affordable and Transparent Pricing
               </h5>
               <p className="mt-2 text-base font-medium leading-6 text-[#445469]">
-                We're at the forefront of fintech innovation, constantly pushing
-                the boundaries to bring you the latest advancements in finance
-                and technology.
+                We understand the importance of sticking to a budget. That’s why we offer competitively priced accommodations with no hidden charges. Enjoy the best value for your money without compromising on quality or comfort.
+
+.
               </p>
             </div>
 
@@ -115,11 +115,10 @@ const WhyUs = () => {
               className={`py-4 pl-6 transition-all ${position === 2 ? "opacity-100" : "opacity-30"}`}
             >
               <h5 className="text-[20px] font-bold leading-[30px] text-[#0e1829]">
-                Transparency
+                Modern Amenities for a Comfortable Stay
               </h5>
               <p className="mt-2 text-base font-medium leading-6 text-[#445469]">
-                We believe in transparency and accountability. No hidden fees,
-                no fine print – just straightforward, honest service.
+                From high-speed Wi-Fi and fully furnished rooms to regular housekeeping and secure premises, we provide all the essentials you need for a hassle-free and productive lifestyle.
               </p>
             </div>
 
@@ -127,12 +126,10 @@ const WhyUs = () => {
               className={`py-4 pl-6 transition-all ${position === 3 ? "opacity-100" : "opacity-30"}`}
             >
               <h5 className="text-[20px] font-bold leading-[30px] text-[#0e1829]">
-                Reliability
+                Trusted and Reliable Service
               </h5>
               <p className="mt-2 text-base font-medium leading-6 text-[#445469]">
-                With a track record of reliability and trustworthiness, you can
-                count on us to deliver on our promises and exceed your
-                expectations
+                With a proven track record of satisfied residents, Heavens Living is a name you can rely on. From seamless booking to consistent maintenance, we prioritize delivering a dependable and worry-free living experience.
               </p>
             </div>
 
@@ -140,12 +137,10 @@ const WhyUs = () => {
               className={`py-4 pl-6 transition-all ${position === 4 ? "opacity-100" : "opacity-30"}`}
             >
               <h5 className="text-[20px] font-bold leading-[30px] text-[#0e1829]">
-                Scalability
+                Focus on Safety and Security
               </h5>
               <p className="mt-2 text-base font-medium leading-6 text-[#445469]">
-                With a track record of reliability and trustworthiness, you can
-                count on us to deliver on our promises and exceed your
-                expectations
+                Your safety is our top priority. With 24/7 surveillance, secure entry systems, and a well-trained support team, you can live with complete peace of mind.
               </p>
             </div>
 
