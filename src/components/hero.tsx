@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import heroBg from "../assets/hero-bg.webp";
-import arrow from "../assets/arrow.svg";
+// import arrow from "../assets/arrow.svg";
 import BookingModal from "./BookingModal";
-import appApk from "../assets/apk/Heavens_LIving.apk";
+// import appApk from "../assets/apk/Heavens_LIving.apk";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -24,17 +24,17 @@ const Hero = () => {
     return () => clearInterval(timer);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  const handleDownload = () => {
-    // Create a link element
-    const link = document.createElement('a');
-    link.href = appApk;
-    link.download = 'Heavens_LIving.apk';
+  // const handleDownload = () => {
+  //   // Create a link element
+  //   const link = document.createElement('a');
+  //   link.href = appApk;
+  //   link.download = 'Heavens_LIving.apk';
     
-    // Trigger download
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  //   // Trigger download
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
 
 
   return (
@@ -114,13 +114,7 @@ const Hero = () => {
             <span>Download App</span>
             <img src={arrow} alt="" />
           </button> */}
-           <button 
-            onClick={handleDownload}
-            className="flex h-[56px] w-[180px] items-center justify-center gap-3 rounded-full text-base font-medium leading-[28px] text-[#445568] underline-offset-8 transition-all hover:underline md:h-[60px] md:w-[202px] md:text-[18px]"
-          >
-            <span>Download App</span>
-            <img src={arrow} alt="" />
-          </button>
+           
         </motion.div>
       </div>
 
