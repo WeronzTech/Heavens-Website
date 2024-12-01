@@ -8,7 +8,7 @@ import SecondCTA from "./components/second-cta";
 import SmoothScrolling from "./components/smooth-scrolling";
 // import Testimonials from './components/Testimonials'
 import Amenities from "./components/Amenities";
-import Contact from "./components/Contact";
+// import Contact from "./components/Contact";
 // import FirstCTA from "./components/first-cta";
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
         <SecondCTA />
         <Amenities />
         {/* <Testimonials /> */}
-        <Contact />
+        {/* <Contact /> */}
         <Footer />
       </main>
     </SmoothScrolling>
