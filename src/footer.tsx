@@ -81,10 +81,28 @@ const Footer = () => {
         }}
         src={logoWhite}
         alt=""
-        className="w-[1315.875px] 3xl:max-w-[1200px] lg:mt-[-15rem]"
+        className="w-[800px] md:w-[850px] lg:mt-[-10rem]"
       />
 
-      {/* <div className="font-semibold text-3xl">LIVING</div> */}
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              duration: 0.5,
+              delay: 0.3,
+              ease: [0.44, 0, 0.22, 0.99],
+            },
+          }}
+          viewport={{
+            amount: "some",
+            once: true,
+          }}
+          className="text-white text-4xl md:text-5xl font-bold mt-[-20px]"
+        >
+          LIVING
+        </motion.h2>
 
       <div className="flex w-full flex-col items-center justify-center gap-12 3xl:max-w-[1200px]">
         <motion.div
