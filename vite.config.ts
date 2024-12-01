@@ -7,5 +7,8 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: 3002, // optional: specify the port if you want a specific one
+    
   },
+  assetsInclude: ['**/*.apk'],
+  publicDir: 'public',
 })

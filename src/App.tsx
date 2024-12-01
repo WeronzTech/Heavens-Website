@@ -6,7 +6,7 @@ import About from "./components/about";
 import WhyUs from "./components/why-us";
 import SecondCTA from "./components/second-cta";
 import SmoothScrolling from "./components/smooth-scrolling";
-import Testimonials from './components/Testimonials'
+// import Testimonials from './components/Testimonials'
 import Amenities from "./components/Amenities";
 import Contact from "./components/Contact";
 // import FirstCTA from "./components/first-cta";
@@ -23,7 +23,7 @@ function App() {
         <WhyUs />
         <SecondCTA />
         <Amenities />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact />
         <Footer />
       </main>

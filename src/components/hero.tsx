@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import heroBg from "../assets/hero-bg.webp";
+import arrow from "../assets/arrow.svg";
 import BookingModal from "./BookingModal";
+import appApk from "../assets/apk/Heavens_LIving.apk";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -22,6 +24,18 @@ const Hero = () => {
     return () => clearInterval(timer);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  const handleDownload = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = appApk;
+    link.download = 'Heavens_LIving.apk';
+    
+    // Trigger download
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
 
   return (
     <section
@@ -94,6 +108,18 @@ const Hero = () => {
             className="group relative h-[56px] w-[180px] overflow-hidden rounded-full border-2 border-[#131316] text-base font-medium leading-[28px] text-[#445568] shadow-[0_1px_2px_0_rgba(14,24,41,0.05)] md:h-[60px] md:w-[202px] md:text-[18px]">
             <div className="absolute -left-1 bottom-0 right-0 -z-10 !mx-auto h-[0px] w-[207px] rounded-full bg-black transition-all duration-300 group-hover:h-[59px]" />
             <span className="group-hover:text-white">Book Now</span>
+          </button>
+
+          {/* <button className="flex h-[56px] w-[180px] items-center justify-center gap-3 rounded-full text-base font-medium leading-[28px] text-[#445568] underline-offset-8 transition-all hover:underline md:h-[60px] md:w-[202px] md:text-[18px]">
+            <span>Download App</span>
+            <img src={arrow} alt="" />
+          </button> */}
+           <button 
+            onClick={handleDownload}
+            className="flex h-[56px] w-[180px] items-center justify-center gap-3 rounded-full text-base font-medium leading-[28px] text-[#445568] underline-offset-8 transition-all hover:underline md:h-[60px] md:w-[202px] md:text-[18px]"
+          >
+            <span>Download App</span>
+            <img src={arrow} alt="" />
           </button>
         </motion.div>
       </div>

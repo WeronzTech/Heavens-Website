@@ -76,7 +76,7 @@ const AboutUs = () => {
         >
           <div className="relative">
             <img
-              src="https://via.placeholder.com/400"
+              src="https://images.pexels.com/photos/358636/pexels-photo-358636.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt="Founders"
               className="w-[400px] h-[400px] object-cover rounded-2xl shadow-lg"
               style={{
@@ -113,7 +113,7 @@ const AboutUs = () => {
         >
           <div className="relative">
             <img
-              src="https://via.placeholder.com/400"
+              src="https://images.pexels.com/photos/260046/pexels-photo-260046.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Our Story"
               className="w-[400px] h-[400px] object-cover rounded-2xl shadow-lg"
               style={{
